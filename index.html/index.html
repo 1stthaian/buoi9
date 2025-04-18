@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Form Đăng Ký</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    .form-container {
+      width: 400px;
+      margin: 30px auto;
+      padding: 20px;
+      border: 1px solid #000;
+    }
+    h2 {
+      color: purple;
+      text-align: center;
+    }
+    label {
+      display: block;
+      margin: 10px 0 5px;
+    }
+    input[type="text"], select, textarea {
+      width: 100%;
+      padding: 5px;
+      margin-bottom: 10px;
+    }
+    .gender, .hobbies {
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="form-container">
+    <h2>FORM ĐĂNG KÝ</h2>
+    <form id="registerForm" onsubmit="return validateForm()">
+      <label>Họ</label>
+      <input type="text" id="ho">
+
+      <label>Tên</label>
+      <input type="text" id="ten">
+
+      <label>Ngày sinh:</label>
+        <select id="ngay"></select>
+        <select id="thang"></select>
+        <select id="nam"></select>
+
+      <label>Giới tính</label>
+      <div class="gender">
+        <input type="radio" name="gender" value="Nam" checked> Nam
+        <input type="radio" name="gender" value="Nữ"> Nữ
+      </div>
+
+      <label>Số điện thoại</label>
+      <input type="text" id="sdt">
+
+      <label>Sở thích</label>
+      <div class="hobbies">
+        <input type="checkbox"> Đọc sách
+        <input type="checkbox"> Xem phim
+        <input type="checkbox"> Nghe nhạc
+        <input type="checkbox"> Đá bóng
+      </div>
+
+      <label>Khác</label>
+      <textarea rows="3"></textarea>
+
+      <input type="submit" value="Submit">
+      <input type="reset" value="Reset">
+    </form>
+  </div>
+
+  <script src="Buoi 9 Bai 1.js"></script>
+
+</body>
+</html>
